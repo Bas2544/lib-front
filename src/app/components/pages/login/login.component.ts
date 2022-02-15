@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
         this.isLoggedIn = true ;
     }else{
         this.loginForm = new FormGroup({
-          staffId: new FormControl(),
+          staff_id: new FormControl(),
           password :  new FormControl()
         })
 
@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
   
   doLogin(){
     let login = {
-      staffId: this.loginForm.value.staffId,
+      staff_id: this.loginForm.value.staff_id,
       password: this.loginForm.value.password
     };
     this.service.login(login)
